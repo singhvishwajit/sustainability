@@ -1,0 +1,92 @@
+<div class="banner">
+	<div class="banner-content">
+		<h1>Circular Economy Innovations</h1>
+		<p>Find, review and learn more about circular economy innovations in your city</p>
+		<a href="#" class="btn-primary">Sign Up</a>
+    <p class="banner-message">Roundput is by invitation only. Please apply for access.</p>
+	</div>
+</div>
+
+<div class="container">
+
+  <h2>Recently Added</h2>
+  <div class="recent-cards">
+    <% @innovations.first(3).each do |innovation| %>
+      <div class="recent-card">
+        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <div class="recent-card-body">
+          <h3 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h3>
+          <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>      
+        </div>
+      </div>
+    <% end %>
+  </div>
+      
+  <div class="sector-section">
+    <div class="sector-cards">
+      <div class="card-cities">
+        <a href="#"></a>
+      </div>
+
+      <div class="card-fashion">
+        <a href="#"></a>
+      </div>
+
+      <div class="card-fnb">
+        <a href="#"></a>
+      </div>
+
+      <div class="card-cp">
+        <a href="#"></a>
+      </div>
+    </div>
+
+    <div class="textbox">
+      <div class="textbox-content"> 
+        <h3>Explore circular economy innovations by popular sectors</h3>
+        <a href="#" class="btn-primary">View All</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Innovations for food and beverages</h2>
+  <div class="foodandbeverage">
+    <% @innovations.where(sector: 'Food and Beverages').last(3).each do |innovation| %>
+      <div class="foodandbeverage-card">
+        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <div class="foodandbeverage-card-body">
+          <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
+          <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>     
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="waste-as-a-resource">
+    <div class="waste-as-a-resource-content">
+      <p>Check out organizations using waste as a resource to create innovative products and services!</p>
+      <a href="#" class="btn-primary">View All</a>
+    </div>
+  </div>
+
+  <h2>Making fashion circular</h2>
+  <div class="circular-fashion">
+    <% @innovations.where(sector:'Fashion').each do |innovation| %>
+      <div class="circular-fashion-card">
+        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <div class="circular-fashion-card-body">
+          <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
+          <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>    
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="newsletter">
+    <div class="newsletter-content">
+      <h3>Subscribe to our newsletter</h3>
+      <p>An update on new innovations, circular economy news and events that are on our radar.</p>
+      <a href="#" class="btn-primary">Subscribe</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,565 @@
+/******************** Gloabal Styles ********************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img, embed, object, video {
+	max-width: 100%;
+} 
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+body {
+	h1, h2, h3, h4, h5, h6, a {
+		font-family: 'Poppins', sans-serif;
+		color: #3a3a3a;
+	}
+	
+	font-family: 'Crimson Text', serif;
+}
+
+/******************** Component Styles ********************/
+
+/********** Button Styles **********/
+
+.btn-primary {
+	color: white;
+	padding: 0.7rem 3rem;
+	font-weight: bold;
+	background-color: green;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-primary:hover {
+	background-color: gray;
+	text-decoration: none;
+}
+
+/********** Bannner Style **********/
+
+.banner {
+	height: 70vh;
+	width: 100%;
+	color: white;
+	background: linear-gradient(135deg,
+				rgba(0, 0, 0, 0.8) 0%,
+				rgba(0, 0, 0, 0.3) 50%),
+		url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Banners/Index.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 4rem;
+	margin-top: 5rem;
+}
+
+.banner-content {
+	max-width: 90%;
+}
+
+.banner h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	color: white;
+}
+
+.banner p {
+	font-size: 1.5rem;
+	font-weight: lighter;
+	opacity: 0.8;
+	margin-bottom: 1.5rem;
+	color: white;
+}
+
+p.banner-message {
+	font-size: 0.9rem;
+	color: white;
+    margin-top: 1rem;
+    opacity: 0.6;
+}
+
+.waste-as-a-resource {
+	height: 70vh;
+	color: white;
+	background: linear-gradient(135deg,
+				rgba(0, 0, 0, 0.8) 0%,
+				rgba(0, 0, 0, 0.3) 50%),
+		url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Banners/221965-P15US9-461.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.waste-as-a-resource-content {
+	max-width: 90%;
+}
+
+.waste-as-a-resource h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	color: white;
+}
+
+.waste-as-a-resource p {
+	font-size: 1.5rem;
+	font-weight: lighter;
+	opacity: 0.8;
+	margin-bottom: 1.5rem;
+	color: white;
+}
+
+/********** Navbar Style **********/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background: white;
+  width: 100%;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  right: 0;
+  position: absolute;
+}
+
+.navbar-menu a {
+  margin: 1rem;
+  color: black;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  border-right: 1px ridge rgba(0, 0, 0, 0.125);
+  border-bottom: 1px ridge rgba(0, 0, 0, 0.125);
+}
+
+.logo {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Logo/Roundput_fake.png') no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  margin: 1.5rem 1rem;
+}
+
+.navbar-brand {
+  	margin: 1rem 1rem 1rem 0;
+  	font-weight: bold;
+  	font-size: 2rem;
+}
+
+/********** Footer Style **********/
+
+.footer-column-one {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.footer-column-two {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.footer-column-three {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.footer-column a {
+	text-decoration: none;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-column h5 {
+	margin-bottom: 1.25rem! important;
+}
+
+.footer-row .social-media-links a {
+	text-decoration: none;
+	margin-right: 3rem;
+	padding-bottom: 2rem;
+}
+
+.footer-row .copyright a {
+	text-decoration: none;
+}
+
+.footer-row p {
+	margin-bottom: 0.75rem;
+}
+
+/********** Form Style **********/
+
+.new-innovation-form {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.edit-innovation-form {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	padding: 0.75rem 0;
+}
+
+.form-group .form-control {
+	flex: 1;
+	height: 5vh;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: .375rem;
+	border-radius: 0.25rem;
+}
+
+.form-group {
+	label {
+	margin-bottom: 0.5rem;
+	}
+}
+
+input[type=submit] {
+  background-color: green;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 0.7rem 0;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/******************** Homepage Styles ********************/
+
+/********** Newsletter Style **********/
+
+.newsletter {
+	height: 50vh;
+	color: black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.newsletter h3 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.newsletter p {
+	font-size: 1.5rem;
+	font-weight: lighter;
+	opacity: 0.8;
+	margin-bottom: 1.5rem;
+}
+
+/********** Recent Cards ***********/
+
+.recent-cards {
+	margin-bottom: 4rem;
+}
+
+.recent-card {
+	margin-top: 0.5rem;
+	margin-bottom: 3rem;
+}
+
+/********** Sector Cards ***********/
+
+.sector-section {
+	margin-bottom: 4rem;
+}
+
+.sector-cards {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.textbox {
+	color: black;
+	text-align: center;
+}
+
+.textbox h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+/********** FoodandBeverage Cards ***********/
+
+.foodandbeverage {
+	margin-bottom: 4rem;
+}
+
+.foodandbeverage-card {
+	margin-bottom: 3rem;
+	margin-top: 0.5rem;
+}
+
+/********** Fashion Cards ***********/
+
+.circular-fashion {
+	margin-bottom: 4rem;
+}
+
+.circular-fashion-card {
+	margin-top: 0.5rem;
+	margin-bottom: 3rem;
+}
+
+.card-cities {
+	width: 50%;
+	height: 40vh;
+	background: url('https://image.freepik.com/free-vector/city-park-with-bench-and-downtown-skyscrapers_3446-641.jpg') no-repeat;
+	background-position: center;	
+	background-size: cover;
+}
+
+.card-fnb {
+	width: 50%;	
+	height: 40vh;
+	background: url('https://image.freepik.com/free-vector/illustration-of-hands-holding-junk-food_53876-26715.jpg') no-repeat;
+	background-position: center;	
+	background-size: cover;
+}
+
+.card-cp {
+	width: 50%;
+	height: 40vh;
+	background: url('https://image.freepik.com/free-photo/vivid-shopping-bags_23-2147652052.jpg') no-repeat;
+	background-position: center;	
+	background-size: cover;
+}
+
+.card-fashion {
+	width: 50%;
+	height: 40vh;
+	background: url('https://image.freepik.com/free-vector/shopping-girl-young-sexy-female-figures-with-fashion-bags-isolated-vector-illustration_1284-2385.jpg') no-repeat;
+	background-position: center;	
+	background-size: cover;
+}
+
+/******************** Indexpage Styles ********************/
+
+/********** Index cards **********/
+
+.index-page {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.card-index {
+	border: 1px solid rgba(0, 0, 0, .125);
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.card-body {
+	padding: 1rem;
+	flex-grow: 1;
+}
+
+.card-text {
+	font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-weight: lighter;
+}
+
+.card-title a {
+	text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.innovation-title a {
+	text-decoration: none;
+}
+
+.card-footer {
+	padding: .75rem 0.75rem;
+    background-color: rgba(0, 0, 0, .03);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer a {
+	text-decoration: none;
+	font-size: 0.75rem;
+	flex: 1 auto;
+	line-height: 1rem;
+}
+
+/******************** Showpage Styles ********************/
+
+.show-page {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.innovation-info {
+	width: 30%;
+}
+
+.innovation-details {
+	width: 50%;
+}
+
+.innovation-links {
+	width: 20%;
+}
+
+.innovation-video {
+	width: 80%;
+	justify-content: center;
+}
+
+/******************** Media Queries ********************/
+
+@media screen and (min-width: 500px) {
+	
+}
+
+@media screen and (min-width: 700px) {
+
+	.recent-cards {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+	margin-top: 0.4rem;
+	}
+
+	.recent-card {
+	flex-basis: 32%;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	}
+
+	.foodandbeverage {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+	margin-top: 0.4rem;
+	}
+
+	.foodandbeverage-card {
+	flex-basis: 32%;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	}
+
+	.circular-fashion {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+	margin-top: 0.4rem;
+	}
+
+	.circular-fashion-card {
+	flex-basis: 32%;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	}
+
+	.waste-as-a-resource {
+	margin-bottom: 4rem;
+	}
+
+	/********** Footer Style **********/
+
+	.footer-column {
+	display: flex;
+	justify-content: space-between;
+	}
+
+	.footer-column-one {
+	flex-basis: 32%;
+	}
+
+	.footer-column-two {
+	flex-basis: 32%;
+	}
+
+	.footer-column-three {
+	flex-basis: 32%;
+	}
+
+	.footer-row {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px ridge rgba(0,0,0,.125);
+	padding-top: 1rem;
+	}
+
+	.footer-row .social-media-links a {
+	text-decoration: none;
+	margin-right:0;
+	margin-left: 3rem;
+	padding-bottom: 2rem;
+	}
+
+	/********** Index Style **********/
+
+	.index {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.card-index {
+		flex-basis: 48%;
+		display: flex;
+		flex-direction: column;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+@media screen and (min-width: 1028px) {
+
+	/********** Index Style **********/
+
+	.index {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.card-index {
+		flex-basis: 32%;
+		display: flex;
+		flex-direction: column;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+		
+}

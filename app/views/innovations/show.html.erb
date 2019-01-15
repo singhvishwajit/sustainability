@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="innovation-video">
+      <%= video_tag(url_for(@innovation.video), :controls => true) %> 
+    </div>
+  <div class="show-page">
+    <p id="notice"><%= notice %></p>
+
+    <div class="innovation-info">
+
+      <p>
+        <strong><%= @innovation.organization %></strong>
+      </p>
+
+      <p>
+        <%= @innovation.innovation_name %>
+      </p>
+
+      <p>
+        <%= @innovation.sector %>
+      </p>
+
+      <p>
+        <%= @innovation.organization_type %>
+      </p>
+
+      <p>
+        <%= @innovation.website %>
+      </p>
+
+      <p>
+        <%= @innovation.email %>
+      </p>
+
+      <p>
+        <%= @innovation.address %>
+      </p>   
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @innovation.phone %>
+      </p> 
+
+      <p>
+        <i class="fab fa-linkedin-in"></i>
+        <%= @innovation.linkedin %>
+      </p>
+
+      <p>
+        <i class="fab fa-twitter"></i>
+        <%= @innovation.twitter %>
+      </p>
+
+      <p>
+        <i class="fab fa-facebook"></i>
+        <%= @innovation.facebook %>
+      </p>
+
+      <p>
+        <i class="fab fa-instagram"></i>
+        <%= @innovation.instagram %>
+      </p>
+
+      <%= link_to 'Edit', edit_innovation_path(@innovation) %> |
+      <%= link_to 'Back', innovations_path %>
+    </div>
+
+
+    <div class="innovation-details">
+
+      <p>
+        <strong>Innovation description:</strong>
+        <%= @innovation.innovation_description %>
+      </p>
+
+      <p>
+        <strong>Organization description:</strong>
+        <%= @innovation.organization_description %>
+      </p>
+
+      <p>
+        <strong>Strategy:</strong>
+        <%= @innovation.strategy %>
+      </p>
+    </div>
+
+
+    <div class="innovation-links">
+      
+    </div>
+  </div>
+</div>

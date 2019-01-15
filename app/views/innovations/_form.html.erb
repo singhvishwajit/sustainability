@@ -1,0 +1,123 @@
+<%= form_with(model: innovation, local: true) do |form| %>
+  <% if innovation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(innovation.errors.count, "error") %> prohibited this innovation from being saved:</h2>
+
+      <ul>
+      <% innovation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :innovation_name %>
+    <%= form.text_field :innovation_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :sector %>
+    <%= form.text_field :sector, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :innovation_description %>
+    <%= form.text_area :innovation_description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :organization %>
+    <%= form.text_field :organization, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :organization_description %>
+    <%= form.text_area :organization_description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :organization_type %>
+    <%= form.text_field :organization_type, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :website %>
+    <%= form.text_field :website, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :strategy %>
+    <%= form.text_field :strategy, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :region %>
+    <%= form.text_field :region, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :country %>
+    <%= form.text_field :country, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :city %>
+    <%= form.text_field :city, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :linkedin %>
+    <%= form.text_field :linkedin, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :twitter %>
+    <%= form.text_field :twitter, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :facebook %>
+    <%= form.text_field :facebook, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :instagram %>
+    <%= form.text_field :instagram, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :location %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :video %>
+    <%= form.file_field :video, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :thumbnail %>
+    <%= form.file_field :thumbnail, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit %>
+  </div>
+<% end %>
+
