@@ -220,11 +220,10 @@ p.banner-message {
 .form-group {
 	display: flex;
 	flex-direction: column;
-	padding: 0.75rem 0;
+	padding: 0.5rem 0;
 }
 
 .form-group .form-control {
-	flex: 1;
 	height: 5vh;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	padding: .375rem;
@@ -233,19 +232,90 @@ p.banner-message {
 
 .form-group {
 	label {
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.25rem;
 	}
 }
 
 input[type=submit] {
   background-color: green;
+  font-weight: bold;
   border: none;
   color: white;
-  width: 100%;
-  padding: 0.7rem 0;
-  border-radius: 0.25rem;
+  padding: 0.7rem 3rem;
   text-decoration: none;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+.signup-form {
+	margin-top: 7.5rem;
+	margin-bottom: 7.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	width: 22rem;
+	a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	}
+	
+	input[type=submit] {
+	width: 100%;
+	border-radius: 0.25rem;
+	}
+}
+
+.signin-form {
+	margin-top: 7.5rem;
+	margin-bottom: 7.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	width: 22rem;
+	a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	}
+	
+	input[type=submit] {
+	width: 100%;
+	border-radius: 0.25rem;
+	}
+}
+
+.forgotpassword-form {
+	margin-top: 7.5rem;
+	margin-bottom: 7.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	width: 40%;
+	a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	}
+	
+	input[type=submit] {
+	width: 100%;
+	border-radius: 0.25rem;
+	}
+}
+
+.editprofile-form {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.signin-form-wrapper {
+	display: flex;
+	justify-content: space-around;	
+}
+
+.signup-form-wrapper {
+	display: flex;
+	justify-content: space-around;	
+}
+
+.forgotpassword-form-wrapper {
+	display: flex;
+	justify-content: space-around;	
 }
 
 /******************** Homepage Styles ********************/
@@ -326,6 +396,17 @@ input[type=submit] {
 }
 
 .circular-fashion-card {
+	margin-top: 0.5rem;
+	margin-bottom: 3rem;
+}
+
+/********** Consumer Products Cards ***********/
+
+.circular-consumer-products {
+	margin-bottom: 4rem;
+}
+
+.circular-consumer-products-card {
 	margin-top: 0.5rem;
 	margin-bottom: 3rem;
 }
@@ -440,6 +521,7 @@ input[type=submit] {
 .innovation-video {
 	width: 80%;
 	justify-content: center;
+	margin-top: 5rem;
 }
 
 /******************** Media Queries ********************/
@@ -484,6 +566,19 @@ input[type=submit] {
 	}
 
 	.circular-fashion-card {
+	flex-basis: 32%;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	}
+
+	.circular-consumer-products {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+	margin-top: 0.4rem;
+	}
+
+	.circular-consumer-products-card {
 	flex-basis: 32%;
 	margin-top: 0.5rem;
 	margin-bottom: 0;
@@ -541,7 +636,6 @@ input[type=submit] {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
-
 }
 
 @media screen and (min-width: 1028px) {

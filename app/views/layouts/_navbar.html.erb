@@ -2,10 +2,14 @@
   <nav class="navbar">
     <a href="/" class="logo"></a><span class="navbar-brand">roundput</span>
     <ul class="navbar-menu">
-      <li><a href="/innovations">INNOVATIONS</a></li>
-      <li><a href="#">NEWS</a></li>
-      <li><a href="#">MARKETPLACE</a></li>
-      <li><a href="#">LOGIN</a></li>
+      <li><%= link_to "INNOVATIONS", innovations_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "EDIT PROFILE", edit_user_registration_path %> 
+        <li><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>  
+      <% else %>
+        <li><%= link_to "SIGN UP", new_user_registration_path %>
+        <li><%= link_to "LOGIN", new_user_session_path %>  
+      <% end %>
       <li><a href="#"><i class="fas fa-search"></i></a></li>
     </ul>
   </nav>

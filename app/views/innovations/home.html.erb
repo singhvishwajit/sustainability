@@ -11,7 +11,7 @@
 
   <h2>Recently Added</h2>
   <div class="recent-cards">
-    <% @innovations.first(3).each do |innovation| %>
+    <% @innovations.last(3).each do |innovation| %>
       <div class="recent-card">
         <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
         <div class="recent-card-body">
@@ -62,16 +62,22 @@
     <% end %>
   </div>
 
-  <div class="waste-as-a-resource">
-    <div class="waste-as-a-resource-content">
-      <p>Check out organizations using waste as a resource to create innovative products and services!</p>
-      <a href="#" class="btn-primary">View All</a>
-    </div>
+  <h2>Circular Consumer Products</h2>
+  <div class="circular-consumer-products">
+    <% @innovations.where(sector:'Consumer Products').first(3).each do |innovation| %>
+      <div class="circular-consumer-products-card">
+        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <div class="circular-consumer-products-card-body">
+          <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
+          <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>    
+        </div>
+      </div>
+    <% end %>
   </div>
 
   <h2>Making fashion circular</h2>
   <div class="circular-fashion">
-    <% @innovations.where(sector:'Fashion').each do |innovation| %>
+    <% @innovations.where(sector:'Fashion').first(3).each do |innovation| %>
       <div class="circular-fashion-card">
         <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
         <div class="circular-fashion-card-body">
@@ -80,6 +86,13 @@
         </div>
       </div>
     <% end %>
+  </div>
+
+  <div class="waste-as-a-resource">
+    <div class="waste-as-a-resource-content">
+      <p>Check out organizations using waste as a resource to create innovative products and services!</p>
+      <a href="#" class="btn-primary">View All</a>
+    </div>
   </div>
 
   <div class="newsletter">
