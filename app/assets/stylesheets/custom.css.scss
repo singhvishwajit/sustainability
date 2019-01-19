@@ -154,13 +154,19 @@ p.banner-message {
   background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Logo/Roundput_fake.png') no-repeat;
   background-size: cover;
   padding: 1rem;
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 0.5rem 1rem 1rem;
 }
 
-.navbar-brand {
-  	margin: 1rem 1rem 1rem 0;
+.navbar-brand  {
   	font-weight: bold;
-  	font-size: 2rem;
+  	text-decoration: none;
+  	display: flex;
+  	text-align: center;
+  	font-size: 1.5rem;
+}
+
+span a {
+	margin: 1.5rem 0;
 }
 
 /********** Footer Style **********/
