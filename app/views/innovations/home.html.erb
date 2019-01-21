@@ -99,7 +99,16 @@
     <div class="newsletter-content">
       <h3>Subscribe to our newsletter</h3>
       <p>An update on new innovations, circular economy news and events that are on our radar.</p>
-      <a href="#" class="btn-primary">Subscribe</a>
+      <% if cookies[:saved_newsletter] %>
+        You have successfully subscribed to our newsletter!
+      <% else %>
+        <div class="form-group">
+          <%= form_for @newsletter do |f| %>
+            <%= f.email_field :email, class: "form-control", placeholder: "Enter email address" %>
+            <%= f.button "Subscribe", class: "btn-primary", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Subscribing..."} %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

@@ -3,6 +3,7 @@ class InnovationsController < ApplicationController
 
   def home
     @innovations = Innovation.all
+    @newsletter = Newsletter.new
   end
 
   # GET /innovations
