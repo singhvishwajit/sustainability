@@ -18,7 +18,7 @@
 
   <div class="form-group">
     <%= form.label :sector %>
-    <%= form.text_field :sector, class: "form-control" %>
+    <%= form.select :sector, ['Sustainable Cities','Consumer Products', 'Fashion', 'Food and Beverages', 'Manufacturing', 'Other'], {prompt: "Choose a sector"}, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -38,7 +38,7 @@
 
   <div class="form-group">
     <%= form.label :organization_type %>
-    <%= form.text_field :organization_type, class: "form-control" %>
+    <%= form.select :organization_type, ['Multinational Corporation','National Corporation', 'Small and Medium-sized Enterprise (SME)', 'Startup','Support (investment, consulting, media)', 'Non-profit','Education', 'Government', 'Other' ], {prompt: "Choose an organization type"}, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -48,7 +48,7 @@
 
   <div class="form-group">
     <%= form.label :strategy %>
-    <%= form.text_field :strategy, class: "form-control" %>
+    <%= form.select :strategy, ['Design', 'Resources', 'Business model', 'Product life extension','Waste as a resource', 'Other'], {prompt: "Choose an innovation strategy"}, class: "form-control" %>
   </div>
 
   <div class="form-group">
