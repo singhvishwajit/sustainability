@@ -550,6 +550,50 @@ input[type=submit], button{
 
 @media screen and (min-width: 700px) {
 
+	.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background: white;
+  width: 100%;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  right: 0;
+  position: absolute;
+}
+
+.navbar-menu a {
+  margin: 1rem;
+  color: black;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  border-right: 1px ridge rgba(0, 0, 0, 0.125);
+  border-bottom: 1px ridge rgba(0, 0, 0, 0.125);
+}
+
+.logo {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Logo/Roundput_fake.png') no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  margin: 1.5rem 0.5rem 1rem 1rem;
+}
+
+.navbar-brand  {
+  	font-weight: bold;
+  	text-decoration: none;
+  	display: flex;
+  	text-align: center;
+  	font-size: 1.5rem;
+}
+
+span a {
+	margin: 1.5rem 0;
+}
+
 	.recent-cards {
 	display: flex;
 	justify-content: space-between;

@@ -22,8 +22,9 @@
     </div>
 
     <br>
-
-    <%= link_to 'New Innovation', new_innovation_path %>
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to 'New Innovation', new_innovation_path %>
+    <% end %>
   </div>
 </div>
 
