@@ -38,7 +38,7 @@ body {
 }
 
 .btn-primary:hover {
-	background-color: gray;
+	opacity: 0.9;
 	text-decoration: none;
 }
 
@@ -123,6 +123,36 @@ p.banner-message {
 	color: white;
 }
 
+/********** Pagination Style **********/
+
+.pagination {
+ 	text-align: right;
+  	cursor: default; 
+    font-size: 16px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+}
+.pagination .disabled {
+    color: #474747; 
+}
+.pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #037362; 
+}
+.pagination a {
+    border: 1px solid #dddddd;
+    color: #037362;
+    text-decoration: none; 
+}
+.pagination a:hover, .pagination a:focus {
+    border-color: #037362;
+    background: #037362;
+    color: white; 
+}
 /********** Navbar Style **********/
 
 .navbar {
@@ -147,6 +177,10 @@ p.banner-message {
   text-decoration: none;
   border-right: 1px ridge rgba(0, 0, 0, 0.125);
   border-bottom: 1px ridge rgba(0, 0, 0, 0.125);
+}
+
+.navbar-menu a:hover {
+	color: #037362;
 }
 
 .logo {
@@ -190,6 +224,10 @@ span a {
     font-size: 1rem;
     line-height: 2rem;
     margin-bottom: 0.75rem;
+}
+
+.footer-column a:hover {
+	color: #037362;
 }
 
 .footer-column h5 {
@@ -487,6 +525,10 @@ input[type=submit], button{
     line-height: 2.5rem;
 }
 
+.card-title a:hover {
+	color: #037362;
+}
+
 .innovation-title a {
 	text-decoration: none;
 }
@@ -511,25 +553,14 @@ input[type=submit], button{
 .show-page {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-	display: flex;
-	justify-content: space-between;
 }
 
-.innovation-info {
-	width: 30%;
-}
 
 .innovation-details {
-	width: 50%;
-}
-
-.innovation-links {
-	width: 20%;
+	margin-top: 2rem;
 }
 
 .innovation-video {
-	width: 80%;
-	justify-content: center;
 	margin-top: 5rem;
 }
 
@@ -714,6 +745,7 @@ span a {
 	}
 }
 
+
 @media screen and (min-width: 1028px) {
 
 	/********** Index Style **********/
@@ -730,6 +762,33 @@ span a {
 		flex-direction: column;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
+	}
+
+/********** Showpage Style **********/
+
+	.show-page {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	}
+
+	.innovation-info {
+		width: 30%;
+	}
+
+	.innovation-details {
+		width: 50%;
+	}
+
+	.innovation-links {
+		width: 20%;
+	}
+
+	.innovation-video {
+		width: 80%;
+		justify-content: center;
+		margin-top: 5rem;
 	}
 		
 }

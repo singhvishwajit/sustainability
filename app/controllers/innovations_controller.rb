@@ -11,7 +11,7 @@ class InnovationsController < ApplicationController
   # GET /innovations
   # GET /innovations.json
   def index
-    @innovations = Innovation.all
+    @innovations = Innovation.all.paginate(:page => params[:page], :per_page => 12)
   end
 
   # GET /innovations/1

@@ -7,10 +7,12 @@
     <div class="index">
       <% @innovations.each do |innovation| %>
         <div class="card-index">
-          <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+          <%= link_to innovation do %>
+            <% image_tag url_for(innovation.thumbnail) %>
+          <% end %>
           <div class="card-body">
-            <h3 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h3>
-            <h4 class="innovation-title"><%= link_to innovation.innovation_name, innovation %></h4>
+            <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
+            <h5 class="innovation-title"><%= link_to innovation.innovation_name, innovation %></h5>
             <p class="card-text"><%= sanitize innovation.organization_description %></p>
           </div>
           <div class="card-footer">
@@ -19,6 +21,10 @@
           </div>
         </div>
       <% end %>
+    </div>
+    
+    <div class="pagination">
+      <%= will_paginate @innovations %>
     </div>
 
     <br>

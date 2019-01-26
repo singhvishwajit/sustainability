@@ -13,9 +13,11 @@
   <div class="recent-cards">
     <% @innovations.last(3).each do |innovation| %>
       <div class="recent-card">
-        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <%= link_to innovation do %>
+          <% image_tag url_for(innovation.thumbnail) %>
+        <% end %>
         <div class="recent-card-body">
-          <h3 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h3>
+          <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
           <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>      
         </div>
       </div>
@@ -53,7 +55,9 @@
   <div class="foodandbeverage">
     <% @innovations.where(sector: 'Food and Beverages').last(3).each do |innovation| %>
       <div class="foodandbeverage-card">
-        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <%= link_to innovation do %>
+          <% image_tag url_for(innovation.thumbnail) %>
+        <% end %>
         <div class="foodandbeverage-card-body">
           <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
           <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>     
@@ -66,7 +70,9 @@
   <div class="circular-consumer-products">
     <% @innovations.where(sector:'Consumer Products').first(3).each do |innovation| %>
       <div class="circular-consumer-products-card">
-        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <%= link_to innovation do %>
+          <% image_tag url_for(innovation.thumbnail) %>
+        <% end %>
         <div class="circular-consumer-products-card-body">
           <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
           <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>    
@@ -79,7 +85,9 @@
   <div class="circular-fashion">
     <% @innovations.where(sector:'Fashion').first(3).each do |innovation| %>
       <div class="circular-fashion-card">
-        <img class="card-img-top" src="<%= url_for(innovation.thumbnail) %>" alt="Card image cap">
+        <%= link_to innovation do %>
+          <% image_tag url_for(innovation.thumbnail) %>
+        <% end %>
         <div class="circular-fashion-card-body">
           <h4 class="card-title"><%= link_to innovation.organization.capitalize, innovation %></h4>
           <p class="innovation-title"><%= link_to innovation.innovation_name, innovation %></p>    
