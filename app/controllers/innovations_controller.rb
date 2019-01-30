@@ -1,7 +1,7 @@
 class InnovationsController < ApplicationController
   before_action :set_innovation, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show, :home]
-  before_action :check_user!, only: [:new]
+  #before_action :check_user!, only: [:new]
 
   def home
     @innovations = Innovation.all
@@ -12,6 +12,8 @@ class InnovationsController < ApplicationController
   # GET /innovations.json
   def index
     @innovations = Innovation.all.paginate(:page => params[:page], :per_page => 12)
+    query = params[:search].presence || "*"
+    @innovations = Innovation.search query, page: params[:page], per_page: 12
   end
 
   # GET /innovations/1
